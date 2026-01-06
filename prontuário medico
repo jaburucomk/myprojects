@@ -1,0 +1,59 @@
+## prontuário médico => quantos pacientes?
+qtd_pacientes = int(input("Quantos pacientes você tem? "))
+pacientes = []
+
+
+for _ in range(qtd_pacientes):
+    nome = input("Qual o nome do paciente? ")
+    sobrenome = input("Qual o sobrenome do paciente? ")
+    diagnostico = input("Qual o diagnóstico do paciente? ")
+    cpf = input("Qual o cpf do paciente? ")
+    
+    
+    paciente = {
+        "nome" : nome,
+        "sobrenome": sobrenome,
+        "diagnostico": diagnostico,
+        "cpf": cpf
+    }
+    
+    pacientes.append(paciente)
+
+print("************** Busca de pacientes **************")
+cpf_buscado = input("Qual é o cpf que você está procurando? ")
+for paciente in pacientes:
+
+    if(paciente.get("cpf") == cpf_buscado):
+        print(f"""
+        Nome Completo: {paciente.get('nome')} {paciente.get('sobrenome')} 
+        Diagnóstico: {paciente.get('diagnostico')}
+        Cpf: {paciente.get("cpf")}
+
+
+
+****************************************************************************************
+
+lista = []
+soma = 0
+qnt = int(input('Quantos produtos vc quer cadastrar: '))
+
+for _ in range (qnt):
+    produto = input('qual o produto: ')
+    preco = float(input('qual é o preço do produto: '))
+    
+    soma = soma + preco
+    
+    produtos = {
+        'produto': produto,
+        'preço' : preco
+    }
+
+    lista.append(produtos)
+print("************** nota fiscal **************")
+
+    
+for produto in lista:
+    print('{} / {}'.format(produto.get('produto'),produto.get('preço')))
+print('total R$:{}'.format(soma))
+
+    """)
