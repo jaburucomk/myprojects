@@ -1,0 +1,25 @@
+cadastro_salvo = []
+
+print('**********Bem vindo a portaria roliço!********')
+print('')
+nome_cad = input('Qual é seu nome completo: ')
+Placa_carro = input('Qual é a placa do seu carro: ')
+cpf_cad = input('Qual é seu CPF: ')  # Deixei o CPF como string para facilitar a comparação
+
+cadastro = {
+    "nome": nome_cad,
+    "Placa": Placa_carro,
+    "cpf": cpf_cad
+}
+cadastro_salvo.append(cadastro)
+
+cpf_buscado = input("Qual é o CPF que você está procurando? ")
+
+print('******* Pessoa encontrada: *******')
+
+# Buscar o cadastro pelo CPF
+for cadastro in cadastro_salvo:
+    if cadastro.get("cpf") == cpf_buscado:
+        print("Nome Completo: {}  Placa do carro: {}  CPF: {}".format(cadastro.get('nome'), cadastro.get('Placa'), cadastro.get('cpf')))
+else:
+    print("CPF não encontrado.")
