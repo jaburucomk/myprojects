@@ -1,0 +1,65 @@
+def ler_numeros():
+    numero1 = int(input("Primeiro valor: "))
+    numero2 = int(input("Segundo valor: "))
+    return numero1,numero2 
+
+def multiplication():
+    numero1,numero2 = ler_numeros()
+    multi = numero1 * numero2
+    return multi
+
+def divisao():
+    numero1,numero2 = ler_numeros()
+    if(numero2 == 0):
+        print("Divisão impossível")
+        
+    else:
+        metade = numero1 / numero2
+        return metade
+
+def subtration():
+    numero1,numero2 = ler_numeros()
+    menos = numero1 - numero2
+    return menos
+    
+
+def soma():
+    numero1,numero2 = ler_numeros()
+    somatorio = numero1 + numero2
+    return somatorio
+    
+        
+def inicio():
+     print("""
+        Que operação você deseja fazer?
+
+        1 - soma
+        2 - subratração
+        3 - divisão
+        4 - multiplicação
+        0 - sair
+        """)
+        
+        
+while(True):
+    inicio()
+    opcao = int(input("Digite a sua opção: "))
+    if (opcao == 1):
+        somatorio = soma()
+        print(f"Soma: {somatorio}")
+    elif(opcao == 2):
+        menos = subtration()
+        print(f"Subtração: {menos}")
+        
+    elif(opcao == 3):
+        metade = divisao()
+        print(f"Divisão: {metade}")
+    elif(opcao == 4):
+        multi = multiplication()
+        print(f"multiplicação: {multi}")
+        
+    else:
+        print("A aplicação será encerrada.")
+        break
+        print("Fim.")
+inicio()
